@@ -197,37 +197,131 @@ class reg_function_test extends base_test;
             
             yapp_012_seq.start(yapp_sequencer);
 
-            yapp_regs.addr0_cnt_reg.read(status, count_addr0);
-            yapp_regs.addr1_cnt_reg.read(status, count_addr1);
-            yapp_regs.addr2_cnt_reg.read(status, count_addr2);
-            yapp_regs.addr3_cnt_reg.read(status, count_addr3);
+            // yapp_regs.addr0_cnt_reg.read(status, count_addr0);
+            // yapp_regs.addr1_cnt_reg.read(status, count_addr1);
+            // yapp_regs.addr2_cnt_reg.read(status, count_addr2);
+            // yapp_regs.addr3_cnt_reg.read(status, count_addr3);
 
-            `uvm_info(get_type_name(),"\n\n*** they have not been incremented*** ",UVM_NONE)
-            `uvm_info(get_type_name(),$sformatf("Address_0 register count = %0d",count_addr0),UVM_NONE);
-            `uvm_info(get_type_name(),$sformatf("Address_1 register count = %0d",count_addr1),UVM_NONE);
-            `uvm_info(get_type_name(),$sformatf("Address_2 register count = %0d",count_addr2),UVM_NONE);
-            `uvm_info(get_type_name(),$sformatf("Address_3 register count = %0d\n\n",count_addr3),UVM_NONE);
+            // `uvm_info(get_type_name(),"\n\n*** they have not been incremented*** ",UVM_NONE)
+            // `uvm_info(get_type_name(),$sformatf("Address_0 register count = %0d",count_addr0),UVM_NONE);
+            // `uvm_info(get_type_name(),$sformatf("Address_1 register count = %0d",count_addr1),UVM_NONE);
+            // `uvm_info(get_type_name(),$sformatf("Address_2 register count = %0d",count_addr2),UVM_NONE);
+            // `uvm_info(get_type_name(),$sformatf("Address_3 register count = %0d\n\n",count_addr3),UVM_NONE);
 
             yapp_regs.en_reg.write(status, 8'hff);
             repeat(2)
                 begin
                     yapp_012_seq.start(yapp_sequencer);
                 end
-            yapp_regs.en_reg.predict(status,8'hff);
-            yapp_regs.addr0_cnt_reg.predict(8'h02);
-            yapp_regs.addr1_cnt_reg.predict(8'h02);
-            yapp_regs.addr2_cnt_reg.predict(8'h02);
-            yapp_regs.addr3_cnt_reg.predict(8'h00);
+            // yapp_regs.en_reg.predict(status,8'hff);
+            // yapp_regs.addr0_cnt_reg.predict(8'h02);
+            // yapp_regs.addr1_cnt_reg.predict(8'h02);
+            // yapp_regs.addr2_cnt_reg.predict(8'h02);
+            // yapp_regs.addr3_cnt_reg.predict(8'h00);
 
-            `uvm_info(get_type_name(),"\n\n *** All the address counts should be incremented *** ",UVM_NONE)
-            `uvm_info(get_type_name(),$sformatf("Address_0 register count = %0d",count_addr0),UVM_NONE);
-            `uvm_info(get_type_name(),$sformatf("Address_1 register count = %0d",count_addr1),UVM_NONE);
-            `uvm_info(get_type_name(),$sformatf("Address_2 register count = %0d",count_addr2),UVM_NONE);
-            `uvm_info(get_type_name(),$sformatf("Address_3 register count = %0d\n",count_addr3),UVM_NONE);
+            // `uvm_info(get_type_name(),"\n\n *** All the address counts should be incremented *** ",UVM_NONE)
+            // `uvm_info(get_type_name(),$sformatf("Address_0 register count = %0d",count_addr0),UVM_NONE);
+            // `uvm_info(get_type_name(),$sformatf("Address_1 register count = %0d",count_addr1),UVM_NONE);
+            // `uvm_info(get_type_name(),$sformatf("Address_2 register count = %0d",count_addr2),UVM_NONE);
+            // `uvm_info(get_type_name(),$sformatf("Address_3 register count = %0d\n",count_addr3),UVM_NONE);
 
 
      phase.drop_objection(this," Dropping Objection to uvm built reset test finished");     
   endtask
+
+endclass
+
+// Introspect Test
+
+
+
+class introspect_test extends base_test;
+
+  // int rdata; count_addr0, count_addr1, count_addr2, count_addr3;
+  int rdata;
+
+    yapp_tx_sequencer yapp_sequencer;
+    yapp_012_packets yapp_012_seq;
+    yapp_regs_c yapp_regs;
+    uvm_status_e status;
+
+    uvm_reg qreg[$], rwregs[$], roregs[$];
+
+    `uvm_component_utils(introspect_test)
+
+    function new(string name="introspect_test", uvm_component parent);
+        super.new(name, parent);
+    endfunction //new()
+
+
+    function void connect_phase(uvm_phase phase);
+
+      yapp_regs = inst_tb.yapp_rm.router_yapp_regs;
+      yapp_sequencer = inst_tb.environment.agent.sequencer;
+
+    endfunction: connect_phase
+       
+    function void build_phase(uvm_phase phase);
+       
+      super.build_phase(phase);
+      uvm_reg::include_coverage("*", UVM_NO_COVERAGE);
+      
+      yapp_regs= yapp_regs_c::type_id::create("yapp_regs");
+      yapp_012_seq = yapp_012_packets::type_id::create("yapp_012_seq");
+
+     // reset_seq = reg_access_test::type_id::create("uvm_reset_seq");
+        uvm_config_wrapper::set(this, "inst_tb.channel_?.rx_agent.sequencer.run_phase",
+                                "default_sequence", channel_rx_resp_seq::get_type());
+
+        uvm_config_wrapper::set(this, "inst_tb.environment.agent.sequencer.run_phase",
+                                "default_sequence", null);
+
+        uvm_config_wrapper::set(this, "inst_tb.clock_and_reset.agent.sequencer.run_phase",
+                       "default_sequence", clk10_rst5_seq::get_type());
+    
+    endfunction: build_phase
+
+    task run_phase(uvm_phase phase);
+        phase.raise_objection(this, "Running introspection test");
+            
+            yapp_regs.get_registers(qreg);
+
+            foreach(qreg[i]) begin
+
+              if(qreg[i].get_rights() == "RO") begin
+                roregs.push_back(qreg[i]);
+                `uvm_info(get_type_name(), $sformatf("Read_Only Register Name =  %s",qreg[i].get_name()), UVM_NONE)
+              end
+            end
+
+                rwregs = qreg.find(i) with (i.get_rights()== "RW");
+                foreach(rwregs[i]) begin
+                    `uvm_info(get_type_name(), $sformatf("Read_Write Register Name =  %s",rwregs[i].get_name()), UVM_NONE)
+                end
+
+            yapp_regs.en_reg.write(status, 1'b1);
+            yapp_regs.en_reg.read(status, rdata);
+
+            `uvm_info(get_type_name(), $sformatf("en_reg after write: 0x%0h", rdata), UVM_LOW);
+
+            
+            yapp_012_seq.start(yapp_sequencer);
+
+            yapp_regs.en_reg.write(status, 8'hff);
+            repeat(2)
+                begin
+                    yapp_012_seq.start(yapp_sequencer);
+                end
+
+                foreach(rwregs[i]) begin
+                    `uvm_info("RW REG", $sformatf("Reg Number = %d Read_Write Register Name =  %s, regvalue: %d", i+1, rwregs[i].get_name(), rwregs[i]), UVM_NONE)
+                end
+
+                foreach(roregs[i]) begin
+                    `uvm_info("RO REG", $sformatf("Reg Number = %d Read_Only Register Name =  %s, regvalue: %d", i+1, roregs[i].get_name(), roregs[i]), UVM_NONE)
+                end
+     phase.drop_objection(this," Finished introspection test");     
+    endtask: run_phase
 
 endclass
 
