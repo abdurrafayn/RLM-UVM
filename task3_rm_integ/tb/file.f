@@ -30,5 +30,5 @@ clkgen.sv
 hw_top_dut.sv
 tb_top.sv
 
-+UVM_TESTNAME=reg_access_test
++UVM_TESTNAME=reg_function_test
 +UVM_VERBOSITY=UVM_LOW
