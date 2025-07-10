@@ -1,5 +1,5 @@
 xrun(64): 23.09-s006: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	23.09-s006: Started on Jul 09, 2025 at 17:50:42 PKT
+TOOL:	xrun(64)	23.09-s006: Started on Jul 10, 2025 at 09:25:45 PKT
 xrun
 	-access +rwc
 	-uvm
@@ -213,52 +213,6 @@ xrun: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,14): cds.
 DEFINE cds_amsfunctions ./CDS_AMSFUNCTIONS
 |
 xrun: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,15): cds.lib Invalid path '/home/cc/mnt/XCELIUM2309/tools/inca/files/CDS_AMSFUNCTIONS' (cds.lib command ignored).
-Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /home/cc/mnt/XCELIUM2309/tools/methodology/UVM/CDNS-1.1d
-DEFINE std       ./STD
-|
-xmvlog: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,1): cds.lib Invalid path '/home/cc/mnt/XCELIUM2309/tools/inca/files/STD' (cds.lib command ignored).
-DEFINE synopsys  ./SYNOPSYS
-|
-xmvlog: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,2): cds.lib Invalid path '/home/cc/mnt/XCELIUM2309/tools/inca/files/SYNOPSYS' (cds.lib command ignored).
-DEFINE ieee      ./IEEE
-|
-xmvlog: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,3): cds.lib Invalid path '/home/cc/mnt/XCELIUM2309/tools/inca/files/IEEE' (cds.lib command ignored).
-DEFINE ambit     ./AMBIT
-|
-xmvlog: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,4): cds.lib Invalid path '/home/cc/mnt/XCELIUM2309/tools/inca/files/AMBIT' (cds.lib command ignored).
-DEFINE vital_memory ./VITAL_MEMORY
-|
-xmvlog: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,5): cds.lib Invalid path '/home/cc/mnt/XCELIUM2309/tools/inca/files/VITAL_MEMORY' (cds.lib command ignored).
-DEFINE ncutils ./NCUTILS
-|
-xmvlog: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,6): cds.lib Invalid path '/home/cc/mnt/XCELIUM2309/tools/inca/files/NCUTILS' (cds.lib command ignored).
-DEFINE ncinternal ./NCINTERNAL
-|
-xmvlog: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,7): cds.lib Invalid path '/home/cc/mnt/XCELIUM2309/tools/inca/files/NCINTERNAL' (cds.lib command ignored).
-DEFINE ncmodels ./NCMODELS
-|
-xmvlog: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,8): cds.lib Invalid path '/home/cc/mnt/XCELIUM2309/tools/inca/files/NCMODELS' (cds.lib command ignored).
-DEFINE xmutils ./XMUTILS
-|
-xmvlog: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,9): cds.lib Invalid path '/home/cc/mnt/XCELIUM2309/tools/inca/files/XMUTILS' (cds.lib command ignored).
-DEFINE xminternal ./XMINTERNAL
-|
-xmvlog: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,10): cds.lib Invalid path '/home/cc/mnt/XCELIUM2309/tools/inca/files/XMINTERNAL' (cds.lib command ignored).
-DEFINE xmmodels ./XMMODELS
-|
-xmvlog: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,11): cds.lib Invalid path '/home/cc/mnt/XCELIUM2309/tools/inca/files/XMMODELS' (cds.lib command ignored).
-DEFINE cds_assertions ./CDS_ASSERTIONS
-|
-xmvlog: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,12): cds.lib Invalid path '/home/cc/mnt/XCELIUM2309/tools/inca/files/CDS_ASSERTIONS' (cds.lib command ignored).
-DEFINE cds_inhconn ./CDS_INHCONN
-|
-xmvlog: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,13): cds.lib Invalid path '/home/cc/mnt/XCELIUM2309/tools/inca/files/CDS_INHCONN' (cds.lib command ignored).
-DEFINE cds_spicelib ./CDS_SPICELIB
-|
-xmvlog: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,14): cds.lib Invalid path '/home/cc/mnt/XCELIUM2309/tools/inca/files/CDS_SPICELIB' (cds.lib command ignored).
-DEFINE cds_amsfunctions ./CDS_AMSFUNCTIONS
-|
-xmvlog: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,15): cds.lib Invalid path '/home/cc/mnt/XCELIUM2309/tools/inca/files/CDS_AMSFUNCTIONS' (cds.lib command ignored).
 DEFINE std       ./STD
 |
 xmvlog: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,1): cds.lib Invalid path '/home/cc/mnt/XCELIUM2309/tools/inca/files/STD' (cds.lib command ignored).
@@ -305,10 +259,42 @@ DEFINE cds_amsfunctions ./CDS_AMSFUNCTIONS
 |
 xmvlog: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,15): cds.lib Invalid path '/home/cc/mnt/XCELIUM2309/tools/inca/files/CDS_AMSFUNCTIONS' (cds.lib command ignored).
 xmvlog: *W,NOTIND: unable to access -INCDIR ./tb (No such file or directory).
+file: ../../yapp/sv/yapp_pkg.sv
+	package worklib.yapp_pkg:sv
+		errors: 0, warnings: 0
+file: ../../yapp/sv/yapp_if.sv
+	interface worklib.yapp_if:sv
+		errors: 0, warnings: 0
+file: ../../channel/sv/channel_pkg.sv
+	package worklib.channel_pkg:sv
+		errors: 0, warnings: 0
+file: ../../channel/sv/channel_if.sv
+	interface worklib.channel_if:sv
+		errors: 0, warnings: 0
+file: ../../hbus/sv/hbus_pkg.sv
+	package worklib.hbus_pkg:sv
+		errors: 0, warnings: 0
+file: ../../hbus/sv/hbus_if.sv
+	interface worklib.hbus_if:sv
+		errors: 0, warnings: 0
 file: ../../clock_and_reset/sv/clock_and_reset_pkg.sv
 package clock_and_reset_pkg;
                           |
 xmvlog: *W,TSNSPK (../../clock_and_reset/sv/clock_and_reset_pkg.sv,3|26): `timescale is not specified for the package.  The default timescale of 1ns/1ns will be assumed for this package.
+	package worklib.clock_and_reset_pkg:sv
+		errors: 0, warnings: 1
+file: ../../clock_and_reset/sv/clock_and_reset_if.sv
+	interface worklib.clock_and_reset_if:sv
+		errors: 0, warnings: 0
+file: cdns_uvmreg_utils_pkg.sv
+	package worklib.cdns_uvmreg_utils_pkg:sv
+		errors: 0, warnings: 0
+file: yapp_router_regs_rdb.sv
+	package worklib.yapp_router_reg_pkg:sv
+		errors: 0, warnings: 0
+file: clkgen.sv
+	module worklib.clkgen:sv
+		errors: 0, warnings: 0
 file: ../../router_rtl/yapp_router.sv
 	module worklib.host_ctl:sv
 		errors: 0, warnings: 0
@@ -465,7 +451,7 @@ xmelab: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,15): cd
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
 	Top level design units:
-		$unit_0x3f33572d
+		$unit_0x6684979c
 		uvm_pkg
 		cdns_uvmapi
 		cdns_assert2uvm_pkg
@@ -481,7 +467,7 @@ xmelab: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,15): cd
 	Building instance overlay tables: .....
     packet_delay inside {[1:20]};
                              |
-xmelab: *W,VALFIT (/home/cc/Downloads/Rafay_Data/RLM_Lab/NCDC_DV_Lab_43/Lab_43_Files/yapp/sv/yapp_packet.sv,80|29): Value will not fit in the random variable.
+xmelab: *W,VALFIT (/home/cc/Downloads/Rafay_Data/RLM_UVM/RLM-UVM/yapp/sv/yapp_packet.sv,80|29): Value will not fit in the random variable.
 ............... Done
 	Generating native compiled code:
 DEFINE std       ./STD
@@ -529,31 +515,35 @@ xmvlog_cg: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,14):
 DEFINE cds_amsfunctions ./CDS_AMSFUNCTIONS
 |
 xmvlog_cg: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,15): cds.lib Invalid path '/home/cc/mnt/XCELIUM2309/tools/inca/files/CDS_AMSFUNCTIONS' (cds.lib command ignored).
-		worklib.clkgen:sv <0x19dca1e4>
+		worklib.clkgen:sv <0x3a2cf9eb>
 			streams:   2, words:   944
-		worklib.fifo:sv <0x69f15242>
+		worklib.fifo:sv <0x16702b68>
 			streams:  11, words:  5863
-		worklib.port_fsm:sv <0x274534c0>
+		worklib.port_fsm:sv <0x07240847>
 			streams:  39, words: 25402
-		worklib.host_ctl:sv <0x754aefb1>
-			streams:  21, words: 20589
-		worklib.yapp_router:sv <0x600676d7>
+		worklib.host_ctl:sv <0x753b92fd>
+			streams:  21, words: 20992
+		worklib.yapp_router:sv <0x430288d5>
 			streams:  18, words:  4636
-		worklib.tb_top:sv <0x480c663b>
+		worklib.tb_top:sv <0x3bc89611>
 			streams: 175, words: 210569
-		worklib.channel_pkg:sv <0x230eacfb>
+		worklib.yapp_router_reg_pkg:sv <0x5f983383>
+			streams: 351, words: 292371
+		worklib.cdns_uvmreg_utils_pkg:sv <0x7039ccb5>
+			streams:  60, words: 127851
+		worklib.channel_pkg:sv <0x29349b24>
 			streams: 598, words: 769848
-		worklib.clock_and_reset_pkg:sv <0x5d15d1a8>
+		worklib.clock_and_reset_pkg:sv <0x262e6b94>
 			streams: 523, words: 626181
-		worklib.clock_and_reset_if:sv <0x1e52f3d9>
+		worklib.clock_and_reset_if:sv <0x13612f80>
 			streams:   9, words:  2633
-		worklib.hw_top:sv <0x5a87650c>
+		worklib.hw_top:sv <0x384b659e>
 			streams:  23, words:  6246
-		worklib.hbus_if:sv <0x4df1ea8b>
+		worklib.hbus_if:sv <0x4c4a72b7>
 			streams: 840, words: 1032326
-		worklib.channel_if:sv <0x0a145458>
+		worklib.channel_if:sv <0x598c241b>
 			streams:   5, words:  8806
-		worklib.yapp_if:sv <0x362ac28e>
+		worklib.yapp_if:sv <0x11d57c53>
 			streams: 759, words: 918216
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
@@ -626,7 +616,7 @@ DEFINE cds_amsfunctions ./CDS_AMSFUNCTIONS
 |
 xmsim: *W,DLCPTH (/home/cc/mnt/XCELIUM2309/tools/inca/files/cdsvhdl.lib,15): cds.lib Invalid path '/home/cc/mnt/XCELIUM2309/tools/inca/files/CDS_AMSFUNCTIONS' (cds.lib command ignored).
 Loading snapshot worklib.hw_top:sv .................... Done
-SVSEED set randomly from command line: 708288457
+SVSEED set randomly from command line: 1029061661
 xcelium> source /home/cc/mnt/XCELIUM2309/tools/xcelium/files/xmsimrc
 xcelium> source /home/cc/mnt/XCELIUM2309/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
 xcelium> run
@@ -886,6 +876,12 @@ Starting uvm_reset_seq sequence...
 
 UVM_INFO ../../clock_and_reset/sv/clock_and_reset_seq.sv(20) @ 0: uvm_test_top.inst_tb.clock_and_reset.agent.sequencer@@clk10_rst5_seq.cr [clock_and_reset_sequence] starting body clock_and_reset_wait_seq
 UVM_INFO /home/cc/mnt/XCELIUM2309/tools/methodology/UVM/CDNS-1.1d/sv/src/reg/sequences/uvm_mem_walk_seq.svh(118) @ 0: reporter@@uvm_reset_seq.single_mem_walk_seq [uvm_mem_walk_seq] Walking memory yapp_rm.router_yapp_mem in map "yapp_rm.router"...
+<<<DBG_ROUTER Resetting YAPP Router >>>>
+<<<DBG_ROUTER Resetting YAPP Router >>>>
+<<<DBG_ROUTER Resetting YAPP Router >>>>
+<<<DBG_ROUTER Resetting YAPP Router >>>>
+<<<DBG_ROUTER Resetting YAPP Router >>>>
+<<<DBG_ROUTER Resetting YAPP Router >>>>
 UVM_INFO ../../hbus/sv/hbus_monitor.sv(101) @ 650: uvm_test_top.inst_tb.hbus.monitor [hbus_monitor] Collecting Transaction
 UVM_INFO ../../hbus/sv/hbus_monitor.sv(109) @ 750: uvm_test_top.inst_tb.hbus.monitor [hbus_monitor] transaction collected :
 ------------------------------------------------------------
@@ -11662,4 +11658,5 @@ UVM_FATAL :    0
 Simulation complete via $finish(1) at time 17950 NS + 65
 /home/cc/mnt/XCELIUM2309/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
 xcelium> exit
-TOOL:	xrun(64)	23.09-s006: Exiting on Jul 09, 2025 at 17:50:47 PKT  (total: 00:00:05)
+TOOL:	xrun(64)	23.09-s006: Exiting on Jul 10, 2025 at 09:25:48 PKT  (total: 00:00:03)
+ 09:25:48 

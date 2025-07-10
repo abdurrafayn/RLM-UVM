@@ -361,6 +361,7 @@ module host_ctl
 
 
        reset_mem;
+       $display("<<<DBG_ROUTER Resetting YAPP Router >>>>");
 
      end // always reset
 
